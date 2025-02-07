@@ -1,0 +1,115 @@
+/* .tennis-section {
+    padding: 100px 40px;
+    background: white;
+}
+
+.section-label {
+    color: var(--tennis-green);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.rackets-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.racket-card {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.racket-card img {
+    width: 100%;
+    height: auto;
+}
+
+.racket-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background: var(--tennis-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.tennis-ball-section {
+    position: relative;
+    height: 500px;
+    background: #f5f5f5;
+    overflow: hidden;
+}
+
+.tennis-ball-content {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    max-width: 400px;
+    color: white;
+    z-index: 1;
+}
+
+.tennis-ball-section img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.player-section {
+    height: 600px;
+    background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/CleanShot%202025-02-05%20at%2011%E2%80%AF.17.39@2x.jpg-2svO4m1SKskXnYw7bi1TyYU851v8ed.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+footer {
+    background: var(--tennis-green);
+    padding: 40px;
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .rackets-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    nav ul {
+        display: none;
+    }
+} */

@@ -1,0 +1,63 @@
+@use '../utils/variables';
+
+header {
+    position: fixed;
+    width: 100%;
+    padding-left: 30px;
+    padding-top: 19px;
+    display: flex;
+    z-index: 1000;
+    background: transparent;
+}
+
+a.logo {
+    padding: 6px;
+    margin-right: 28px;
+    align-self: self-start;
+}
+
+.menu-links-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 54px;
+    padding-right: 94px;
+    padding-top: 33px;
+
+    nav ul.menu-links {
+        display: flex;
+        list-style: none;
+        gap: 32px;
+        font-size: 16px;
+        letter-spacing: 1.5px;
+        color: var(--white);
+
+        li a {
+            padding: 10px;
+            position: relative;
+
+            &.active {
+                font-weight: bold;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 10px;
+                    bottom: 0px;
+                    background-color: var(--white);
+                    width: 17px;
+                    height: 2px;
+                }
+            }
+        }
+    }
+
+    .language-select {
+        display: flex;
+        color: var(--white);
+
+        a {
+            padding: 10px;
+        }
+    }
+}

@@ -1,0 +1,62 @@
+.btn {
+    height: 53px;
+    margin: 49px 0 0;
+    padding: 15px 38px;
+    border-radius: 26.5px;
+    position: relative;
+
+    &:before {
+        content: '';
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='6' viewBox='0 0 23 6'%3E%3Cpath fill='%2329304A' fill-rule='evenodd' d='M22.908 2.7L20.428.128a.39.39 0 0 0-.579 0 .425.425 0 0 0 0 .6l1.778 1.843H.413C.165 2.57 0 2.74 0 3c0 .257.165.428.413.428h21.213l-1.779 1.844a.425.425 0 0 0 0 .6.44.44 0 0 0 .29.128.44.44 0 0 0 .289-.129l2.48-2.572a.531.531 0 0 0 .002-.6z'/%3E%3C/svg%3E");
+        position: absolute;
+        width: 23px;
+        height: 6px;
+        right: 28px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.3s ease;
+    }
+
+    &:hover {
+        &:before {
+            right: 18px;
+        }
+    }
+}
+
+.btn-template-1 {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+
+    width: 269px;
+    height: 53px;
+    // margin: 361px 842px 0 100px;
+    padding: 15px 39px 15px 30px;
+    border-radius: 26.5px;
+    border: solid 1px var(--white);
+
+    // &:hover {
+    //     border-color: var(--dark-three);
+    //     background: var(--dark-three);
+    //     color: var(--dark-three);
+    // }
+}
+
+.btn-template-2 {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid var(--dark-three);
+    border-radius: 25px;
+    margin-top: 20px;
+    min-width: 234px;
+    min-height: 53px;
+
+    &:before {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='6' viewBox='0 0 23 6'%3E%3Cpath fill='%2329304A' fill-rule='evenodd' d='M22.908 2.7L20.428.128a.39.39 0 0 0-.579 0 .425.425 0 0 0 0 .6l1.778 1.843H.413C.165 2.57 0 2.74 0 3c0 .257.165.428.413.428h21.213l-1.779 1.844a.425.425 0 0 0 0 .6.44.44 0 0 0 .29.128.44.44 0 0 0 .289-.129l2.48-2.572a.531.531 0 0 0 .002-.6z'/%3E%3C/svg%3E");
+    }
+}
