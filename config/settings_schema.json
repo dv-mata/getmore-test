@@ -1,0 +1,13 @@
+[
+    {
+        "name": "General",
+        "settings": [
+            {
+                "type": "text",
+                "id": "shop_name",
+                "label": "Prueba técnica",
+                "default": "Get More - David Martinez"
+            }
+        ]
+    }
+]

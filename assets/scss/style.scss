@@ -1,11 +1,12 @@
-@forward './utils/variables';
+@import 'utils/variables';
+@import 'utils/mixins';
 
-@forward 'base/reset';
-@forward 'base/typography';
+@import 'base/reset';
+@import 'base/typography';
 
-@forward 'layout/header';
-@forward 'layout/footer';
+@import 'layout/header';
+@import 'layout/footer';
 
-@forward 'components/buttons';
+@import 'components/buttons';
 
-@forward 'pages/home';
+@import 'pages/home';

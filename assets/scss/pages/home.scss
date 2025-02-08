@@ -1,9 +1,9 @@
 @use '../utils/variables';
 
-.hero-swiper {
+.hero-homepage {
     position: relative;
 
-    .hero-slide {
+    &__content {
         height: 100vh;
         position: relative;
 
@@ -11,7 +11,6 @@
             content: '';
             position: absolute;
             left: 105px;
-            // left: 100px;
             top: 0;
             width: 2px;
             background-color: var(--white);
@@ -26,6 +25,10 @@
             height: 100%;
             object-fit: fill;
             z-index: -1;
+
+            @include media(lg) {
+                object-fit: cover;
+            }
         }
 
         .hero-content__text {
@@ -33,9 +36,14 @@
             top: 50%;
             transform: translateY(-50%);
             padding-left: 170px;
-            width: 100%;
-            max-width: 709px;
+            width: 49.2361111111%;
             color: var(--white);
+
+            @include media(lg) {
+                padding-left: 30px;
+                padding-right: 30px;
+                width: 100%;
+            }
 
             h1 {
                 font-size: 53px;
@@ -43,8 +51,16 @@
                 line-height: 1.28;
                 letter-spacing: -0.05px;
                 color: var(--white);
+                margin-bottom: 35px;
 
-                span {
+                @include media(lg) {
+                    text-wrap: pretty;
+                    br {
+                        display: none;
+                    }
+                }
+
+                strong {
                     color: var(--sickly-yellow);
                 }
             }
@@ -54,14 +70,18 @@
 
 .section-2 {
     background-color: var(--pale-gray);
-    padding-top: 72px;
+    padding-top: 91px;
     padding-bottom: 67px;
     display: flex;
+    min-height: 392px;
+
+    @include media(lg) {
+        flex-direction: column;
+    }
 
     &__category-label {
         font-size: 15px;
         font-weight: 500;
-        font-stretch: normal;
         font-style: normal;
         line-height: 2;
         letter-spacing: 1.87px;
@@ -69,13 +89,26 @@
         color: var(--sickly-yellow);
         width: 174px;
         padding-left: 33px;
-        margin-left: 255px;
         padding-top: 15px;
+        margin-left: 17.92%;
+
+        @include media(lg) {
+            margin-left: 0;
+            padding-left: 30px;
+            width: fit-content;
+            text-align: center;
+        }
     }
 
     &__content {
-        width: 555px;
+        width: 38.5416666667%;
         margin: 0 0 15px 51px;
+
+        @include media(lg) {
+            width: 100%;
+            padding: 0 30px;
+            margin: 0;
+        }
 
         h2 {
             color: var(--dark);
@@ -85,29 +118,60 @@
             font-style: normal;
             line-height: 1.14;
             letter-spacing: -0.06px;
+            word-break: break-all;
+            margin-bottom: 35px;
+
+            @include media(lg) {
+                font-size: 30px;
+                margin-bottom: 15px;
+            }
         }
 
         p {
-            margin: 15px 162px 0 0;
+            margin: 0 162px 0 0;
             font-family: HelveticaNeue;
             font-size: 18px;
             line-height: 1.78;
             letter-spacing: 0.51px;
             color: var(--warm-grey);
+
+            @include media(lg) {
+                font-size: 14px;
+            }
         }
     }
 
     &__button-container {
         display: flex;
         align-items: end;
+        padding-right: 168px;
+
+        @include media(lg) {
+            margin-top: 30px;
+            padding-left: 30px;
+        }
     }
 }
 
 .section-3 {
+    display: flex;
+
+    @include media(md) {
+        flex-direction: column;
+    }
+
     .slider-left-container {
         width: 530px;
         height: 468px;
         position: relative;
+        flex: 0 0 530px;
+
+        @include media(md) {
+            width: 100%;
+            min-height: 468px;
+            height: auto;
+            flex: 1 0 auto;
+        }
 
         img {
             position: absolute;
@@ -117,14 +181,92 @@
             height: 100%;
             object-fit: fill;
             z-index: -1;
+            @include media(md) {
+                object-fit: cover;
+            }
         }
 
-        .slider-left-content {
+        .productLeftSwiper {
+            padding-bottom: 43px;
+
+            .swiper-pagination {
+                padding-left: 200px;
+                padding-right: 27px;
+                text-align: left;
+                bottom: 0;
+                position: relative;
+                padding-top: 32px;
+                padding-bottom: 32px;
+
+                @include media(md) {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+
+                .swiper-pagination-bullet {
+                    width: 8px;
+                    margin: 0 24px 0 0;
+                    object-fit: contain;
+                    background-color: var(--grey);
+                    opacity: 1;
+                }
+
+                .swiper-pagination-bullet-active {
+                    background-color: var(--sickly-yellow);
+                }
+            }
+
+            .swiper-arrows-wrapper {
+                display: flex;
+                gap: 19px;
+                padding-left: 190px;
+                padding-right: 27px;
+
+                @include media(md) {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+
+                .swiper-arrow {
+                    width: 54px;
+                    height: 54px;
+                    background-color: transparent;
+                    border-radius: 50%;
+                    border: 1px solid var(--white);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: disabled;
+
+                    &.swiper-prev {
+                        svg {
+                            transform: rotate(180deg);
+                            position: relative;
+                            left: -2px;
+                        }
+                    }
+
+                    &:not(.swiper-button-disabled) {
+                        background-color: var(--sickly-yellow);
+                        border-color: var(--sickly-yellow);
+                        box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.5);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .swiper-slide-content {
             padding-left: 200px;
             padding-top: 38px;
             padding-right: 27px;
+
+            @include media(md) {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
             h2 {
-                // margin: 0 44px 120px 10px;
                 font-size: 50px;
                 line-height: 1.28;
                 font-weight: normal;
@@ -135,6 +277,10 @@
                 strong {
                     font-weight: bold;
                 }
+
+                @include media(lg) {
+                    font-size: 30px;
+                }
             }
 
             p {
@@ -143,7 +289,70 @@
                 letter-spacing: 0.51px;
                 font-weight: normal;
                 color: var(--white);
+
+                @include media(lg) {
+                    font-size: 14px;
+                }
             }
+        }
+    }
+
+    .slider-right-container {
+        padding-top: 51px;
+        padding-bottom: 73px;
+        position: relative;
+        display: flex;
+        overflow: hidden;
+
+        @include media(md) {
+            padding-bottom: 50px;
+        }
+
+        .swiper-wrapper {
+            padding-left: 52px;
+        }
+
+        .swiper-slide {
+            min-width: 288px;
+            max-width: 288px;
+            position: relative;
+            span {
+                background-color: var(--sickly-yellow);
+                border-radius: 50%;
+                width: 39px;
+                height: 39px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                font-size: 17px;
+                line-height: 1.76;
+                text-align: center;
+                top: 11px;
+                left: 17px;
+                color: var(--white);
+            }
+
+            &-active {
+                margin-right: 31px !important;
+                @include media(md) {
+                    margin-right: 30px !important;
+                }
+            }
+
+            &-prev {
+                // margin-left: 47px; //aqui
+                margin-right: 36px !important;
+                opacity: 1;
+                @include media(md) {
+                    margin-left: 0 !important;
+                    margin-right: 30px !important;
+                }
+            }
+
+            // &:has(+ .swiper-slide-prev) {
+            //     opacity: 0;
+            // }
         }
     }
 }

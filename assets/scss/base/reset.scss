@@ -1,12 +1,18 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 html,
 body {
     height: 100%;
+    -webkit-font-smoothing: antialiased;
     font-family: 'Helvetica Neue', sans-serif;
 }
 
@@ -24,16 +30,4 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
-}
-
-button {
-    border: none;
-    cursor: pointer;
-}
-
-input,
-button,
-textarea,
-select {
-    font: inherit;
 }
